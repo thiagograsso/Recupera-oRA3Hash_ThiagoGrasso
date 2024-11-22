@@ -6,8 +6,7 @@ public class AnaliseTabelaHash {
         TabelaHash tabelaDobramento = new TabelaHash(1000, new HashDobramento());
 
         // Dados para inserção
-        Registro[] registros = gerarRegistros(10000);  // Substituímos a lista por um vetor de registros
-
+        Registro[] registros = gerarRegistros(10000); 
         // Inserção e contagem de colisões e comparações para HashDivisao
         long tempoInicio = System.nanoTime();
         for (Registro registro : registros) {
@@ -75,8 +74,8 @@ public class AnaliseTabelaHash {
     public static Registro[] gerarRegistros(int quantidade) {
         Registro[] registros = new Registro[quantidade];
         for (int i = 0; i < quantidade; i++) {
-            String codigo = gerarCodigo9Digitos(i);  // Gera um código único para cada registro
-            registros[i] = new Registro(codigo, "Valor " + i);  // Criamos um registro com o código gerado
+            String codigo = gerarCodigo9Digitos(i);  
+            registros[i] = new Registro(codigo, "Valor " + i); 
         }
         return registros;
     }
