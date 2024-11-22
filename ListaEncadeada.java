@@ -19,6 +19,6 @@ public class ListaEncadeada {
             }
             atual = atual.proximo;
         }
-        return null; // Não encontrado
+        return null; 
     }
 }
