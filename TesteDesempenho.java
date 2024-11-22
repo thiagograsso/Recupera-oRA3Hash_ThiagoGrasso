@@ -3,7 +3,7 @@ public class TesteDesempenho {
     public static void main(String[] args) {
         int numBuscas = 5;
         for (int tamanhoTabela : new int[]{1000, 10000, 100000}) {
-            for (int funcaoHash : new int[]{1, 2, 3}) { // Exemplo de funções hash
+            for (int funcaoHash : new int[]{1, 2, 3}) { 
                 for (int tamanhoConjunto : new int[]{10000, 100000, 1000000}) {
                     long tempoTotalBusca = 0;
                     int comparacoesTotais = 0;
