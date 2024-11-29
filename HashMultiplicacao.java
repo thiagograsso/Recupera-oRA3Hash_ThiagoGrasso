@@ -2,10 +2,11 @@ public class HashMultiplicacao extends FuncaoHash {
     @Override
     public int calcularHash(String codigo) {
         int hash = 0;
-        for (int i = 0; i < codigo.length(); i++) {
-            hash = hash * 31 + (codigo.charAt(i) * 3); 
+        int tamanho = tamanhoString(codigo);
+        for (int i = 0; i < tamanho; i++) {
+            hash = hash * 31 + (codigo.charAt(i) * 3);
         }
-        return hash % 1000; // Ajuste o divisor conforme o tamanho da tabela
+        return hash % 1000;
     }
 
     @Override
