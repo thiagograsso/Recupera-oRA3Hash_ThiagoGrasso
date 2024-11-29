@@ -2,7 +2,7 @@ public class TesteTabelasHash {
     public static void main(String[] args) {
         TabelaHash tabelaHash = new TabelaHash(1000, new HashDivisao());
 
-        // Inserção de exemplo
+
         for (int i = 0; i < 100; i++) {
             String codigo = gerarCodigo9Digitos(i);
             Registro registro = new Registro(codigo, "Valor " + i);
@@ -10,10 +10,10 @@ public class TesteTabelasHash {
             System.out.println("Comparações ao inserir " + codigo + ": " + comparacoesInsercao);
         }
 
-        // Exibir total de colisões após as inserções
+
         System.out.println("Total de colisões após inserção: " + tabelaHash.getTotalColisoes());
 
-        // Busca de exemplo
+
         for (int i = 0; i < 100; i++) {
             String codigo = gerarCodigo9Digitos(i);
             Registro registroEncontrado = tabelaHash.buscar(codigo).getRegistro();
